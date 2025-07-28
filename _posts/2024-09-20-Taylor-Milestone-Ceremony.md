@@ -1,6 +1,6 @@
 ---
 title: Welcome, Taylor Evans!
-image: images/taylor_milestone2.jpg
+image: images/taylor_milestone2.jpeg
 author: evan-cornett
 tags: milestone ceremony
 ---
@@ -8,10 +8,10 @@ We had a blast celebrating Taylor Evans at the IUSM Graduate Student Milestone C
 
 {% capture content %}
 
-{% include figure.html image="images/taylor_milestone1.jpg" %}
-{% include figure.html image="images/taylor_milestone2.jpg" %}
-{% include figure.html image="images/taylor_milestone3.jpg" %}
-{% include figure.html image="images/taylor_milestone4.jpg" %}
+{% include figure.html image="images/taylor_milestone1.jpeg" %}
+{% include figure.html image="images/taylor_milestone2.jpeg" %}
+{% include figure.html image="images/taylor_milestone3.jpeg" %}
+{% include figure.html image="images/taylor_milestone4.jpeg" %}
 
 
 
