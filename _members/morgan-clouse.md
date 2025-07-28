@@ -1,6 +1,7 @@
 ---
 name: Morgan Clouse
 role: summer
+image: morgan.png
 group: alum
 aliases:
   - Morgan
