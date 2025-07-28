@@ -1,0 +1,20 @@
+---
+title: Welcome Taylor Evans!
+image: images/taylor_milestone2.jpg
+author: evan-cornett
+tags: milestone ceremony
+---
+
+
+{% capture content %}
+
+{% include figure.html image="images/taylor_milestone1.jpg" %}
+{% include figure.html image="images/taylor_milestone2.jpg" %}
+{% include figure.html image="images/taylor_milestone3.jpg" %}
+{% include figure.html image="images/taylor_milestone4.jpg" %}
+
+
+
+{% endcapture %}
+
+{% include grid.html style="square" content=content %}
