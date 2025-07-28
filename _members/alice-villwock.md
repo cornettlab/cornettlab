@@ -1,6 +1,6 @@
 ---
 name: Alice Westermann Villwock
-image: alice.png
+image: images/alice.png
 role: summer
 group: alum
 aliases:
