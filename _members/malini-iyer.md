@@ -2,6 +2,7 @@
 name: Malini Iyer
 image: images/malini.jpg
 role: ms
+group: alum
 aliases:
   - MLS
   - 
