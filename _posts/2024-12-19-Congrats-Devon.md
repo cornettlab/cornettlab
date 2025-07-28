@@ -1,6 +1,6 @@
 ---
 title: Congratulations Devon!
-image: images/devon_qe.jpg
+image: images/devon_qe1.jepg
 author: evan-cornett
 tags: qualifying 
 ---
@@ -8,10 +8,9 @@ tags: qualifying
 Devon succsefully passed her qualifying exam.
 {% capture content %}
 
-{% include figure.html image="images/devon_qe1.jpg" %}
-{% include figure.html image="images/devon_qe2.jpg" %}
-{% include figure.html image="images/devon_qe3.jpg" %}
-{% include figure.html image="images/devon_qe4.jpg" %}
+{% include figure.html image="images/devon_qe1.jpeg" %}
+{% include figure.html image="images/devon_qe2.jpeg" %}
+
 
 
 
