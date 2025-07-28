@@ -1,11 +1,11 @@
 ---
 title: Congratulations Devon!
-image: images/devon_qe1.jepg
+image: images/devon_qe2.jpeg
 author: evan-cornett
 tags: qualifying 
 ---
 
-Devon succsefully passed her qualifying exam.
+Congratulations to Devon on successfully passing her qualifying exam! We celebrated with some escape room fun. 
 {% capture content %}
 
 {% include figure.html image="images/devon_qe1.jpeg" %}
