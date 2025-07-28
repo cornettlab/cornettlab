@@ -8,10 +8,10 @@ tags: defense
 Malini became the first MS student to succesfully defend her thesis! Congratulations on the succesfull defense!
 {% capture content %}
 
-{% include figure.html image="images/malini_defense1.jpg" %}
-{% include figure.html image="images/malini_defense2.jpg" %}
-{% include figure.html image="images/malini_defense3.jpg" %}
-{% include figure.html image="images/malini_defense4.jpg" %}
+{% include figure.html image="images/malini_defense1.jpeg" %}
+{% include figure.html image="images/malini_defense2.jpeg" %}
+{% include figure.html image="images/malini_defense3.jpeg" %}
+{% include figure.html image="images/malini_defense4.jpeg" %}
 
 
 
