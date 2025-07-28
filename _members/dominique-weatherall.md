@@ -8,4 +8,4 @@ aliases:
 
 ---
 
-Dominique is a summer intern through the SUREB program.
+Dominique was a summer intern through the SUREB program.
