@@ -11,7 +11,7 @@ links:
   twitter: aushbegosh
 
 ---
-**Where is she now?** 
+**Where are they now?** 
 <br>
 Christine defended her PhD dissertation in July 2024. In August 2024, Christine joined Dr. Steve Angus' lab in the Department of Pediatrics at Indiana University School of Medicine as a Postdoctoral Researcher. 
 <br>
