@@ -9,7 +9,7 @@ aliases:
 links:
   orcid: 0000-0001-7195-482X
 ---
-**Where is she now?**
+**Where are they now?**
 <br>
 Jocelyne defended her PhD dissertation in May 2025. In August 2025, Jocelyne joined Dr. Steve Angus’ lab in the Department of Pediatrics at Indiana University School of Medicine as a Postdoctoral Researcher.
 <br>
