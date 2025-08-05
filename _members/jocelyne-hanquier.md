@@ -2,6 +2,7 @@
 name: Jocelyne Hanquier
 image: images/jocelyne.jpg
 role: phd
+group: alum
 aliases:
   - JHN
   - Jocelyne
