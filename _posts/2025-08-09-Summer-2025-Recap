@@ -1,0 +1,21 @@
+---
+title: Summer 2025 Recap!
+image: images/summer2025-1.png
+author: evan-cornett
+tags: summer, posters
+---
+
+SUMMER
+{% capture content %}
+
+{% include figure.html image="images/jocelynedefense1.jpeg" %}
+{% include figure.html image="images/jocelynedefense2.jpeg" %}
+{% include figure.html image="images/jocelynedefense3.jpeg" %}
+{% include figure.html image="images/jocelynedefense4.jpeg" %}
+{% include figure.html image="images/jocelynedefense5.jpeg" %}
+{% include figure.html image="images/jocelynedefense6.jpeg" %}
+
+
+{% endcapture %}
+
+{% include grid.html style="square" content=content %}
