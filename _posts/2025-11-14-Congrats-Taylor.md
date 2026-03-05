@@ -1,6 +1,6 @@
 ---
 title: Congratulations Taylor!
-image: images/taylorqe1.png
+image: images/taylorqe1b.png
 author: evan-cornett
 tags: qualifying 
 ---
@@ -12,7 +12,7 @@ Congratulations to Taylor on successfully passing his qualifying exam! We celebr
 {% include figure.html image="images/taylorqe3.png" %}
 {% include figure.html image="images/taylorqe4.png" %}
 {% include figure.html image="images/taylorqe5.png" %}
-{% include figure.html image="images/taylorqe1.png" %}
+{% include figure.html image="images/taylorqe1b.png" %}
 
 
 
