@@ -55,8 +55,12 @@
   date: '2025-01-01'
   link: https://doi.org/hbrkd4
   orcid: 0000-0003-1468-4506
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+  image: /images/methodchapter.png
+  tags:
+  - cornett lab
+  - KMTs
 - id: doi:10.3390/biom14070817
   title: Protein Thermal Stability Changes Induced by the Global Methylation Inhibitor
     3-Deazaneplanocin A (DZNep)
@@ -74,6 +78,7 @@
   orcid: 0000-0003-1468-4506
   plugin: sources.py
   file: sources.yaml
+  image: https://mdpi-res.com/biomolecules/biomolecules-14-00817/article_deploy/html/images/biomolecules-14-00817-g002.png?1720517290
   tags:
   - cornett lab
 - id: doi:10.1126/sciadv.adk4423
