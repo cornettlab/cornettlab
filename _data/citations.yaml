@@ -17,8 +17,13 @@
   date: '2026-01-02'
   link: https://doi.org/hbrj5m
   orcid: 0000-0003-1468-4506
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+  image: /images/preprint2025.jpg
+  tags:
+  - cornett lab
+  - mass spectrometry
+  - pre print
 - id: doi:10.1021/acs.jproteome.4c00685
   title: Quantitative Analysis of Nonhistone Lysine Methylation Sites and Lysine Demethylases
     in Breast Cancer Cell Lines
@@ -34,8 +39,12 @@
   date: '2025-01-08'
   link: https://doi.org/g9vfsr
   orcid: 0000-0003-1468-4506
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+  image: /images/jpr2025.jpeg
+  tags:
+  - cornett lab
+  - mass spectrometry
 - id: doi:10.1126/sciadv.adk4423
   title: Select EZH2 inhibitors enhance viral mimicry effects of DNMT inhibition through
     a mechanism involving NFAT:AP-1 signaling
@@ -57,6 +66,7 @@
   orcid: 0000-0003-1468-4506
   plugin: sources.py
   file: sources.yaml
+  image: /images/aliscienceadvance.jpg
   tags:
   - collaboration
   - VAI
@@ -79,6 +89,8 @@
   image: /images/prdm9.jpeg
   tags:
   - cornett lab
+  - KOPL
+  - KMTs
 - id: doi:10.1038/s41598-022-27175-x
   title: Global lysine methylome profiling using systematically characterized affinity
     reagents
@@ -119,8 +131,12 @@
   date: '2022-05-01'
   link: https://doi.org/gtw9f6
   orcid: 0000-0003-1468-4506
-  plugin: orcid.py
-  file: orcid.yaml
+  plugin: sources.py
+  file: sources.yaml
+  image: /images/milliejbc.jpg
+  tags:
+  - collaboration
+  - KMTs
 - id: doi:10.1074/jbc.RA120.015353
   title: A physical basis for quantitative ChIP-sequencing
   authors:
@@ -269,11 +285,11 @@
   orcid: 0000-0003-1468-4506
   plugin: sources.py
   file: sources.yaml
+  image: /images/2019_f1.jpeg
   tags:
   - KOPL
   - evans postdoc papers
   - VAI
-  image: /images/2019_f1.jpeg
 - id: doi:10.1016/j.molcel.2018.08.015
   title: Examining the Roles of H3K4 Methylation States with Systematically Characterized
     Antibodies
