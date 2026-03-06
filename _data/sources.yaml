@@ -4,6 +4,24 @@
     - cornett lab
     - mass spectrometry
 
+- id: doi:10.1016/j.jbc.2022.101894
+  image: /images/milliejbc.jpg
+  tags:
+    - collaboration
+    - KMTs
+
+- id: doi:10.1021/acs.jproteome.4c00685
+  image: /images/jpr2025.jpeg
+  tags: 
+    - cornett lab
+    - mass spectrometry 
+    
+- id: doi:10.64898/2025.12.31.696910
+  image: /images/preprint2025.jpeg
+   tags: 
+    - cornett lab
+    - mass spectrometry 
+
 - id: doi:10.1038/s41467-019-10324-8
   tags:
     - evans postdoc papers
@@ -55,10 +73,12 @@
   image: /images/prdm9.jpeg
   tags:
     - cornett lab
+    - KOPL
+    - KMTs
     
 
-
 - id: doi:10.1126/sciadv.adk4423
+  image: /images/aliscienceadvance.jpg
   tags:
     - collaboration
     - VAI
