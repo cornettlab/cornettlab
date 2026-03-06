@@ -21,7 +21,7 @@ The Cornett Lab is a group of researchers at the [Indiana University School of M
 
 {%
   include feature.html
-  image="images/group.jpg"
+  image="images/group2026.jpg"
   link="team"
   text=text
 %}
