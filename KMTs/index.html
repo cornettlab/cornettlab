@@ -39,47 +39,39 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Summer Party 2024</title>
+<title>KMTs</title>
 
 <link rel="icon" href="/images/icon.png">
 
-<meta name="title" content="Summer Party 2024">
+<meta name="title" content="KMTs">
 <meta name="description" content="">
 
-<meta property="og:title" content="Summer Party 2024">
+<meta property="og:title" content="KMTs">
 <meta property="og:site_title" content="">
 <meta property="og:description" content="">
 <meta property="og:url" content="http://www.cornettlab.com">
 <meta property="og:image" content="/images/share.jpg">
 <meta property="og:locale" content="en_US">
 
-<meta property="twitter:title" content="Summer Party 2024">
+<meta property="twitter:title" content="KMTs">
 <meta property="twitter:description" content="">
 <meta property="twitter:url" content="http://www.cornettlab.com">
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:image" content="/images/share.jpg">
 
 
-  <meta name="author" content="evan-cornett">
-  <meta property="og:type" content="article">
-  <meta property="og:updated_time" content="2026-03-06T01:54:54+00:00">
-  <meta property="article:published_time" content="2024-07-01T00:00:00+00:00">
-  <meta property="article:modified_time" content="2026-03-06T01:54:54+00:00">
-  <meta name="revised" content="2026-03-06T01:54:54+00:00">
+  <meta property="og:type" content="website">
 
 
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     
-      "@type": "BlogPosting",
-      "author": { "@type": "Person", "name": "Summer Party 2024" },
-      "datePublished": "2024-07-01T00:00:00+00:00",
-      "dateModified": "2026-03-06T01:54:54+00:00",
+      "@type": "WebSite",
     
-    "name": "Summer Party 2024",
+    "name": "KMTs",
     "description": "",
-    "headline": "Summer Party 2024",
+    "headline": "KMTs",
     "publisher": {
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/icon.png" }
@@ -286,6 +278,58 @@
     <link href="/_styles/util.css" rel="stylesheet">
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 
 <!-- include all css in styles folder -->
 
@@ -391,210 +435,190 @@
   
   
 
-  <section class="background" data-size="1" style="--image: url('/images/summer2024-8.jpg')">
-    <!--
-  background: images/summer2024-8.jpg;
-  dark: ;
-  size: 1;
--->
+  <section class="background" data-size="10px" style="--image: url('/#eee')">
+    <p>&lt;!DOCTYPE html&gt;</p>
 
 
-<h1 class="center">Summer Party 2024</h1>
+    <meta charset="UTF-8">
+    <title>Gene Activity Sunburst Charts</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-<div class="post-info">
-  
-    
-    
-      
+        #charts-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 50px;
+        }
 
-<div class="portrait-wrapper">
-  <a href="/members/evan-cornett.html" class="portrait" data-style="tiny" aria-label="Evan M. Cornett">
-    <img src="/images/cornett-evan.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+        .chart-wrapper {
+            position: relative;
+        }
 
-    
-      <span class="portrait-text">
-        
-          <span class="portrait-name">
-            Evan M. Cornett
-          </span>
-        
+        .gene-label {
+            font-size: 10px;
+            fill: black;
+        }
 
-        
-          <span class="portrait-role">
-            
-            <i class="icon fa-solid fa-microscope"></i>
-            <span>Principal Investigator</span>
-          </span>
-        
-      </span>
-    
-  </a>
+        .arc-border {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 0.5px;
+        }
+
+        #legend {
+            margin-top: 30px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #eee;
+            border-radius: 5px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .color-box {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #999;
+        }
+    </style>
+
+
+
+<div id="charts-container">
+    <div id="kmt-chart" class="chart-wrapper"></div>
+    <div id="kdm-chart" class="chart-wrapper"></div>
 </div>
 
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>July 01, 2024</span>
-    </span>
-  
-
-  
-    <span data-tooltip="Last updated on">
-      <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>March 06, 2026</span>
-    </span>
-  
+<div id="legend">
+    <div class="legend-item">
+<div class="color-box" style="background-color: #A36AC7;"></div>Clinical</div>
+    <div class="legend-item">
+<div class="color-box" style="background-color: #38C2E7;"></div>Preclinical</div>
+    <div class="legend-item">
+<div class="color-box" style="background-color: #279F4D;"></div>Histone</div>
+    <div class="legend-item">
+<div class="color-box" style="background-color: #FFD934;"></div>Non-histone</div>
+    <div class="legend-item">
+<div class="color-box" style="background-color: #F89B2B;"></div>Cytoplasm</div>
+    <div class="legend-item">
+<div class="color-box" style="background-color: #E63B34;"></div>Nucleus</div>
 </div>
 
+<script>
+    // Configuration
+    const width = 600;
+    const height = 600;
+    const radius = Math.min(width, height) / 2;
+    const innerRadius = 100;
+    const ringWidth = (radius - innerRadius) / 6;
 
-  
+    // Color mapping based on numeric activity code in CSV
+    const colorScale = d3.scaleOrdinal()
+        .domain([1, 2, 3, 4, 5, 6]) // Mapping values 1-6 in CSV
+        .range(["#A36AC7", "#38C2E7", "#279F4D", "#FFD934", "#F89B2B", "#E63B34"]);
 
+    // Map angle sequentially for labels based on order
+    let currentKMTAngle = 0;
+    let currentKDMAngle = 0;
 
-  <div class="tags" data-link="http://www.cornettlab.com/blog">
-    
-      <a href="http://www.cornettlab.com/blog?search=%22tag:%20summer%22" class="tag" data-tooltip='Show items with the tag "summer"'>
-        summer
-      </a>
-    
-  </div>
-  </section>
+    // Function to draw one chart
+    function drawChart(selector, data, centerText) {
+        const svg = d3.select(selector)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`);
 
-  
-  
-  
+        // Center circle and text
+        svg.append("circle")
+            .attr("r", innerRadius)
+            .attr("fill", "#ddd");
 
-  <section class="background" data-size="page">
-    <!--
-  background: ;
-  dark: ;
-  size: ;
--->
+        svg.append("text")
+            .attr("text-anchor", "middle")
+            .attr("dy", ".35em")
+            .attr("font-size", "40px")
+            .attr("font-weight", "bold")
+            .text(centerText);
 
+        // Define the arcs
+        const arc = d3.arc()
+            .innerRadius(d => innerRadius + (6 - d.Activity) * ringWidth)
+            .outerRadius(d => innerRadius + (7 - d.Activity) * ringWidth)
+            .startAngle(d => (d.Angle - 4) * Math.PI / 180) // 8-degree blocks
+            .endAngle(d => (d.Angle + 4) * Math.PI / 180);
 
-<p>The Cornett Lab gathered for the 2nd annual dessert contest and summer party! There was an impressive display of creativity and nerdy science-themed desserts that tasted as good as they looked! Competition was tight, but Christine took home the trophy for her K-OPL-inspired heatmap dessert. Congratulations, Christine!</p>
+        // Draw colored boxes
+        svg.selectAll(".activity-arc")
+            .data(data)
+            .enter()
+            .append("path")
+            .attr("class", "activity-arc")
+            .attr("d", arc)
+            .attr("fill", d => colorScale(d.Activity))
+            .attr("stroke", "#ccc")
+            .attr("stroke-width", 0.5);
 
-<div class="grid" data-style="square">
-  
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-1.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
+        // Add gene labels
+        // Group data by gene to get unique gene names and their positions
+        const genes = Array.from(d3.group(data, d => d.GeneLabel)).map(([key, value]) => ({
+            label: key,
+            angle: value[0].Angle
+        }));
 
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-2.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
+        svg.selectAll(".gene-label")
+            .data(genes)
+            .enter()
+            .append("text")
+            .attr("class", "gene-label")
+            .attr("text-anchor", "middle")
+            .attr("transform", d => {
+                const angle = d.angle;
+                const r = radius + 15;
+                const x = r * Math.sin(angle * Math.PI / 180);
+                const y = -r * Math.cos(angle * Math.PI / 180);
+                let rotation = angle - 90;
+                if (angle > 180 && angle < 360) {
+                    rotation = angle + 90;
+                }
+                return `translate(${x}, ${y}) rotate(${rotation})`;
+            })
+            .text(d => d.label);
+    }
 
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-3.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
+    // Load the CSV data and draw charts
+    d3.csv("data.csv").then(data => {
+        // Parse activity to integer
+        data.forEach(d => {
+            d.Activity = +d.Activity;
+            d.Angle = +d.Angle; // Ensure angles are read as numbers
+        });
 
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-4.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
+        const kmtData = data.filter(d => d.Circle === "KMTs");
+        const kdmData = data.filter(d => d.Circle === "KDMs");
 
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-5.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
+        drawChart("#kmt-chart", kmtData, "KMTs");
+        drawChart("#kdm-chart", kdmData, "KDMs");
+    });
 
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-6.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
-
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-7.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
-
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/summer2024-8.jpg" style="
-        width: auto;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-  </a>
-  
-</figure>
+</script>
 
 
-</div>
-  </section>
 
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  background: ;
-  dark: ;
-  size: ;
--->
-
-
-<div class="post-nav">
-  <span>
-    
-      <i class="icon fa-solid fa-angle-left"></i> Previous post<br>
-      <a href="/2023/12/15/Lab-Service-Day-2023.html">
-        Lab Service Day 2023
-      </a>
-    
-  </span>
-  <span>
-    
-      Next post <i class="icon fa-solid fa-angle-right"></i><br>
-      <a href="/2024/07/16/2024-Dr-Berryhill.html">
-        Introducting Dr. Berryhill!
-      </a>
-    
-  </span>
-</div>
   </section>
 
 
