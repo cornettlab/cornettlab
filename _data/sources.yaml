@@ -72,3 +72,8 @@
     tags:
       - collaboration
       - VAI
+      
+  - id: doi.org/10.3390/biom14070817
+    image: https://mdpi-res.com/biomolecules/biomolecules-14-00817/article_deploy/html/images/biomolecules-14-00817-g002-550.jpg
+    tags:
+      - cornett lab
