@@ -1,7 +1,14 @@
   - id: doi:10.3390/biom14070817
+    image: https://mdpi-res.com/biomolecules/biomolecules-14-00817/article_deploy/html/images/biomolecules-14-00817-g002.png?1720517290
     tags: 
       - cornett lab
-
+  
+  - id: doi:10.1007/978-1-0716-4486-7_13
+    image: /images/methodchapter.png
+    tags:
+      - cornett lab
+      - KMTs
+      
   - id: doi:10.1038/s41598-022-27175-x
     image: /images/scientificreports2023.png
     tags:
