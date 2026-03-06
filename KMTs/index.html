@@ -435,112 +435,102 @@
   
   
 
-  <section class="background" data-size="11px" style="--image: url('/rgba(0,%200,%200,%200.85)')">
-    
+  <section class="background" data-size="page">
+    <script>
+    // Configuration
+    const width = 700;
+    const height = 700;
+    const radius = Math.min(width, height) / 2;
+    const innerRadius = 110;
+    const ringWidth = (radius - innerRadius - 100) / 6; // Adjusted for label padding
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KMT Gene Activity Visualization</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fcfcfc;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 20px;
-        }
+    const colorScale = d3.scaleOrdinal()
+        .domain([1, 2, 3, 4, 5, 6]) 
+        .range(["#A36AC7", "#38C2E7", "#279F4D", "#FFD934", "#F89B2B", "#E63B34"]);
 
-        h2 {
-            color: #222;
-            margin-bottom: 10px;
-        }
+    const tooltip = d3.select("#tooltip");
 
-        #charts-container {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            max-width: 800px;
-            margin-top: 20px;
-        }
+    // Load the CSV file
+    d3.csv("data.csv").then(data => {
+        // Convert strings to numbers
+        data.forEach(d => {
+            d.Activity = +d.Activity;
+            d.Angle = +d.Angle;
+        });
 
-        .chart-wrapper {
-            position: relative;
-        }
+        drawChart("#kmt-chart", data, "KMT");
+    }).catch(error => {
+        console.error("Error loading the CSV file:", error);
+    });
 
-        .gene-label {
-            font-size: 11px;
-            font-weight: 600;
-            fill: #444;
-            pointer-events: none;
-        }
+    function drawChart(selector, data, centerText) {
+        const svg = d3.select(selector)
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`);
 
-        /* Tooltip Style */
-        #tooltip {
-            position: absolute;
-            text-align: center;
-            padding: 8px;
-            font-size: 12px;
-            background: rgba(0, 0, 0, 0.85);
-            color: #fff;
-            border-radius: 4px;
-            pointer-events: none;
-            opacity: 0;
-            z-index: 100;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
-            transition: opacity 0.2s;
-        }
+        // Center circle
+        svg.append("circle")
+            .attr("r", innerRadius)
+            .attr("fill", "#f0f0f0");
 
-        .activity-arc {
-            cursor: pointer;
-            stroke: #fff;
-            stroke-width: 1px;
-        }
+        svg.append("text")
+            .attr("text-anchor", "middle")
+            .attr("dy", ".35em")
+            .attr("font-size", "42px")
+            .attr("font-weight", "bold")
+            .attr("fill", "#222")
+            .text(centerText);
 
-        #legend {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            padding: 20px;
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
+        // Arc Generator
+        const arcGen = d3.arc()
+            .innerRadius(d => innerRadius + (d.Activity - 1) * ringWidth)
+            .outerRadius(d => innerRadius + d.Activity * ringWidth)
+            .startAngle(d => (d.Angle - 4) * Math.PI / 180)
+            .endAngle(d => (d.Angle + 4) * Math.PI / 180)
+            .cornerRadius(4);
 
-        .legend-item {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-        }
+        // Draw Arcs
+        svg.selectAll(".activity-arc")
+            .data(data)
+            .enter()
+            .append("path")
+            .attr("class", "activity-arc")
+            .attr("d", arcGen)
+            .attr("fill", d => colorScale(d.Activity))
+            .on("mouseover", function(event, d) {
+                d3.select(this).transition().duration(200).attr("opacity", 0.7);
+                tooltip.transition().duration(200).style("opacity", 1);
+                tooltip.html(`<strong>${d.Gene}</strong><br/>Activity Level: ${d.Activity}`)
+                    .style("left", (event.pageX + 15) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function() {
+                d3.select(this).transition().duration(200).attr("opacity", 1);
+                tooltip.transition().duration(200).style("opacity", 0);
+            });
 
-        .color-box {
-            width: 18px;
-            height: 18px;
-            margin-right: 10px;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-    </style>
+        // Add Gene Labels
+        svg.selectAll(".gene-label")
+            .data(data)
+            .enter()
+            .append("text")
+            .attr("class", "gene-label")
+            .attr("transform", d => {
+                const angleRad = (d.Angle - 90) * Math.PI / 180;
+                const r = innerRadius + (d.Activity * ringWidth) + 12;
+                return `translate(${Math.cos(angleRad) * r}, ${Math.sin(angleRad) * r})`;
+            })
+            .attr("text-anchor", d => (d.Angle > 180 ? "end" : "start"))
+            .attr("alignment-baseline", "middle")
+            .text(d => d.Gene);
+    }
+</script>
 
-
-
-    <h2>Lysine Methyltransferases (KMTs)</h2>
-
-    <div id="charts-container">
-        <div id="kmt-chart" class="chart-wrapper"></div>
-    </div>
-
-    <div id="tooltip"></div>
-
-    <div id="legend">
-        <div class="legend-item">
-<div class="color-box" style="background-color: #A36AC7;"></div>Clinical</div>
-        <div class="legend-item">&lt;div class="color-box" style="background-color: #3
-</div>
-</div>
+<p>&lt;/body&gt;
+&lt;/html&gt;</p>
   </section>
 
 
