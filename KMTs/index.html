@@ -435,9 +435,8 @@
   
   
 
-  <section class="background" data-size="10px" style="--image: url('/rgba(0,%200,%200,%200.85)')">
-    <p>&lt;!DOCTYPE html&gt;</p>
-
+  <section class="background" data-size="11px" style="--image: url('/rgba(0,%200,%200,%200.85)')">
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -454,9 +453,14 @@
             padding: 20px;
         }
 
+        h2 {
+            color: #222;
+            margin-bottom: 10px;
+        }
+
         #charts-container {
             display: flex;
-            justify-content: center; /* Centered for single chart */
+            justify-content: center;
             width: 100%;
             max-width: 800px;
             margin-top: 20px;
@@ -467,8 +471,9 @@
         }
 
         .gene-label {
-            font-size: 10px;
-            fill: #333;
+            font-size: 11px;
+            font-weight: 600;
+            fill: #444;
             pointer-events: none;
         }
 
@@ -485,10 +490,13 @@
             opacity: 0;
             z-index: 100;
             box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+            transition: opacity 0.2s;
         }
 
         .activity-arc {
             cursor: pointer;
+            stroke: #fff;
+            stroke-width: 1px;
         }
 
         #legend {
@@ -519,7 +527,7 @@
 
 
 
-    <h2>Epigenetic Regulators: KMTs</h2>
+    <h2>Lysine Methyltransferases (KMTs)</h2>
 
     <div id="charts-container">
         <div id="kmt-chart" class="chart-wrapper"></div>
@@ -530,66 +538,9 @@
     <div id="legend">
         <div class="legend-item">
 <div class="color-box" style="background-color: #A36AC7;"></div>Clinical</div>
-        <div class="legend-item">
-<div class="color-box" style="background-color: #38C2E7;"></div>Preclinical</div>
-        <div class="legend-item">
-<div class="color-box" style="background-color: #279F4D;"></div>Histone</div>
-        <div class="legend-item">
-<div class="color-box" style="background-color: #FFD934;"></div>Non-histone</div>
-        <div class="legend-item">
-<div class="color-box" style="background-color: #F89B2B;"></div>Cytoplasm</div>
-        <div class="legend-item">
-<div class="color-box" style="background-color: #E63B34;"></div>Nucleus</div>
-    </div>
-
-<script>
-    // Configuration
-    const width = 700; // Slightly larger for a single focus chart
-    const height = 700;
-    const radius = Math.min(width, height) / 2;
-    const innerRadius = 110;
-    const ringWidth = (radius - innerRadius - 50) / 6;
-
-    const colorScale = d3.scaleOrdinal()
-        .domain([1, 2, 3, 4, 5, 6]) 
-        .range(["#A36AC7", "#38C2E7", "#279F4D", "#FFD934", "#F89B2B", "#E63B34"]);
-
-    const tooltip = d3.select("#tooltip");
-
-    function drawChart(selector, data, centerText) {
-        const svg = d3.select(selector)
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height)
-            .append("g")
-            .attr("transform", `translate(${width / 2},${height / 2})`);
-
-        // Center circle
-        svg.append("circle")
-            .attr("r", innerRadius)
-            .attr("fill", "#f0f0f0");
-
-        svg.append("text")
-            .attr("text-anchor", "middle")
-            .attr("dy", ".35em")
-            .attr("font-size", "42px")
-            .attr("font-weight", "bold")
-            .attr("fill", "#222")
-            .text(centerText);
-
-        // Generators
-        const arcGen = d3.arc()
-            .innerRadius(d => innerRadius + (6 - d.Activity) * ringWidth)
-            .outerRadius(d => innerRadius + (7 - d.Activity) * ringWidth)
-            .startAngle(d => (d.Angle - 3.5) * Math.PI / 180)
-            .endAngle(d => (d.Angle + 3.5) * Math.PI / 180);
-
-        const hoverArcGen = d3.arc()
-            .innerRadius(d => innerRadius + (6 - d.Activity) * ringWidth)
-            .outerRadius(d => (innerRadius + (7 - d.Activity) * ringWidth) + 12)
-            .startAngle(d => (d.Angle - 4.5) * Math.PI / 180)
-            .endAngle(d => (d.Angle + 4.5) * Math.PI / 180);
-</script>
+        <div class="legend-item">&lt;div class="color-box" style="background-color: #3
+</div>
+</div>
   </section>
 
 
