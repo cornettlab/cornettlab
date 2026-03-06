@@ -8,7 +8,7 @@ We had a great time celebrating Devon at the IUSM Graduate Student Milestone Cer
 
 {% capture content %}
 
-{% include figure.html image="images/devonqemilestone1.png" %}
+{% include figure.html image="images/devonqemilestone1b.png" %}
 {% include figure.html image="images/devonqemilestone2.png" %}
 {% include figure.html image="images/devonqemilestone3.png" %}
 
