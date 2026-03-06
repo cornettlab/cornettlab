@@ -17,10 +17,11 @@
     - mass spectrometry 
     
 - id: doi:10.64898/2025.12.31.696910
-  image: /images/preprint2025.jpeg
+  image: /images/preprint2025.jpg
    tags: 
     - cornett lab
-    - mass spectrometry 
+    - mass spectrometry
+    - pre print
 
 - id: doi:10.1038/s41467-019-10324-8
   tags:
