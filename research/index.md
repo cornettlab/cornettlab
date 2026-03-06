@@ -10,11 +10,7 @@ nav:
 
 {% include section.html %}
 
-## Highlighted
 
-{% include citation.html lookup="doi:10.1038/s41598-022-27175-x" style="rich" %}
-
-{% include section.html %}
 
 ## All
 
