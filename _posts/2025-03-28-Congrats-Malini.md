@@ -5,7 +5,7 @@ author: evan-cornett
 tags: defense
 ---
 
-Malini became the first MS student to succesfully defend her thesis! Congratulations on the succesfull defense!
+Malini became the first MS student to successfully defend her thesis! Congratulations on the successful defense!
 {% capture content %}
 
 {% include figure.html image="images/malini_defense1.jpeg" %}
