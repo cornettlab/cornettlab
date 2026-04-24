@@ -1,0 +1,21 @@
+---
+title: Devon is ELITE!
+image: images/dmeliteA.png
+author: evan-cornett
+tags:  
+---
+
+
+Each year, IU Indianapolis selects 50 graduate students (out of >8,000 graduate students on campus) to form the Elite50! This group is recognized for excellence beyond the classroom. Congratulations, Devon!
+
+{% capture content %}
+
+{% include figure.html image="images/dmeliteA.jpeg" %}
+{% include figure.html image="images/dmeliteB.jpeg" %}
+
+
+
+
+{% endcapture %}
+
+{% include grid.html style="square" content=content %}
