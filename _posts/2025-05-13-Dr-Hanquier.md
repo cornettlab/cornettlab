@@ -5,7 +5,7 @@ author: evan-cornett
 tags: defense
 ---
 
-Jocelyne succesfully defended her PhD dissertation! She gave an oustanding seminar and we are very proud of all she has accomplished! Congratulations Jocelyne!
+Jocelyne successfully defended her PhD dissertation! She gave an outstanding seminar and we are very proud of all she has accomplished! Congratulations Jocelyne!
 {% capture content %}
 
 {% include figure.html image="images/jocelynedefense1.jpeg" %}
