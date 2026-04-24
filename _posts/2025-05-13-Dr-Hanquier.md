@@ -1,5 +1,5 @@
 ---
-title: Introducting Dr. Hanquier!
+title: Introducing Dr. Hanquier!
 image: images/jocelynedefense2.png
 author: evan-cornett
 tags: defense
