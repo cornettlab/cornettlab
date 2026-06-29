@@ -1,6 +1,6 @@
 ---
 name: Maria Chaklasi
-image: images/maria.jpg
+image: images/maria.png
 role: summer
 aliases:
   - MC
