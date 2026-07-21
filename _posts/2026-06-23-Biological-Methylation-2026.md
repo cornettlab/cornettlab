@@ -19,7 +19,6 @@ Evan, Devon, and Taylor traveled to Dublin, Ireland for the 2026 FASEB Biologica
      <img src="/images/faseb2026f.jpg" alt="Biological Methylation Photo">
      <img src="/images/faseb2026g.jpg" alt="Biological Methylation Photo">
      <img src="/images/faseb2026h.jpg" alt="Biological Methylation Photo">
-     <img src="/images/faseb2026i.jpg" alt="Biological Methylation Photo">
      <img src="/images/faseb2026j.jpg" alt="Biological Methylation Photo">
      <img src="/images/faseb2026k.jpg" alt="Biological Methylation Photo">
   </div>
