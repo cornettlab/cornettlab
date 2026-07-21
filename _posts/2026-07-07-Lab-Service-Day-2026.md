@@ -2,7 +2,7 @@
 title: Lab Service Day 2026!
 image: images/streetsweepa.jpg
 author: evan-cornett
-tags:  conferences
+tags:  labservice
 ---
 On a beautiful Tuesday in July, the lab spent a few hours picking up trash around downtown during a Street Sweep event. I'm thankful for a group that works hard in the lab and also takes time to give back to our city!
 
