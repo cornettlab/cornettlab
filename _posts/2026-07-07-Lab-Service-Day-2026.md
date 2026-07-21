@@ -7,7 +7,7 @@ tags:  conferences
 On a beautiful Tuesday in July, the lab spent a few hours picking up trash around downtown during a Street Sweep event. I'm thankful for a group that works hard in the lab and also takes time to give back to our city!
 
 
-{% capture content %}
+
 
   <div class="photo-album">
      <img src="/images/streetsweepa.jpg" alt="Lab Service Photo">
@@ -20,7 +20,4 @@ On a beautiful Tuesday in July, the lab spent a few hours picking up trash aroun
 
 
 
-{% endcapture %}
-
-{% include grid.html style="square" content=content %}
 
