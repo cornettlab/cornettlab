@@ -5,10 +5,10 @@ author: evan-cornett
 tags:  conferences
 ---
 
-Evan, Devon, and Taylor traveled to Dublin, Ireland to present at the 2026 FASEB Biological Methylation Meeting. Evan presented a platform talk on our [latest work](https://www.biorxiv.org/content/10.64898/2025.12.31.696910v1) characterizing changes in lysine methylation during neuronal differentiation. Devon and Taylor both gave flash talks and poster presentations and Devon took home a poster prize! Overall it was a great meeting filled with great science, making new connections, and catching up with old friends (including a great Strahl Scientific Lineage Photo!).    
+Evan, Devon, and Taylor traveled to Dublin, Ireland for the 2026 FASEB Biological Methylation Meeting. Evan presented a platform talk on our [latest work](https://www.biorxiv.org/content/10.64898/2025.12.31.696910v1) characterizing changes in lysine methylation during neuronal differentiation, while Devon and Taylor each delivered flash talks and poster presentations — with Devon taking home a poster prize! It was a fantastic meeting full of great science, new connections, and reconnecting with old friends (including a wonderful Strahl Scientific Lineage Photo!).
 
 
-{% capture content %}
+
 
   <div class="photo-album">
      <img src="/images/faseb2026a.jpg" alt="Biological Methylation Photo">
@@ -26,6 +26,4 @@ Evan, Devon, and Taylor traveled to Dublin, Ireland to present at the 2026 FASEB
 
 
 
-{% endcapture %}
 
-{% include grid.html style="square" content=content %}
