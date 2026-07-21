@@ -16,6 +16,7 @@ nav:
 {% include list.html data="members" component="portrait" filters="role: phd, group: " %}
 {% include list.html data="members" component="portrait" filters="role: ms, group: " %}
 {% include list.html data="members" component="portrait" filters="role: summer, group: " %}
+{% include list.html data="members" component="portrait" filters="role: undergrad, group: " %}
 
 
 {% include section.html dark=true %}
